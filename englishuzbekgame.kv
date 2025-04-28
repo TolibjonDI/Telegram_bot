@@ -1,0 +1,66 @@
+<EnglishGame>:
+    orientation: "vertical"
+    padding: 20
+    spacing: 10
+
+    Label:
+        text: "English Word Matching Game"
+        font_size: 30
+        color: 0, 0, 0, 1
+
+    Label:
+        text: f"Score: {root.score}"
+        font_size: 20
+
+    Label:
+        text: f"Time: {root.time_left}s"
+        font_size: 20
+
+    Label:
+        id: word_label
+        text: root.current_word
+        font_size: 24
+        color: 0.2, 0.2, 0.6, 1
+
+    GridLayout:
+        cols: 2
+        spacing: 10
+        size_hint_y: None
+        height: 200
+
+        Button:
+            id: option_1
+            text: ""
+            on_press: root.check_answer(self.text)
+            background_color: 0.2, 0.6, 0.8, 1
+
+        Button:
+            id: option_2
+            text: ""
+            on_press: root.check_answer(self.text)
+            background_color: 0.2, 0.6, 0.8, 1
+
+        Button:
+            id: option_3
+            text: ""
+            on_press: root.check_answer(self.text)
+            background_color: 0.2, 0.6, 0.8, 1
+
+        Button:
+            id: option_4
+            text: ""
+            on_press: root.check_answer(self.text)
+            background_color: 0.2, 0.6, 0.8, 1
+
+    Label:
+        text: root.feedback
+        font_size: 18
+        color: 0, 0.5, 0, 1
+
+    Button:
+        id: start_btn
+        text: "Start Game"
+        size_hint_y: None
+        height: 50
+        on_press: root.start_game()
+        background_color: 0.1, 0.7, 0.3, 1
